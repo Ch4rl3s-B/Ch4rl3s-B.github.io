@@ -31,17 +31,34 @@ body {
 	    <br>
 	    <br>
 	    <br>
-	    
-		<left><img id="scène" src="https://switzerland-tour.com/storage/media/4-ForArticles/swiss-mountains.jpg" alt="Grandes montagnes en arrières plan avec un lac dans une vallée en premier plan" width="500" ></left>
-        
+ <div class="container">
+      <div class="image">
+        <img src="src="https://switzerland-tour.com/storage/media/4-ForArticles/swiss-mountains.jpg" alt="Grandes montagnes en arrières plan avec un lac dans une vallée en premier plan" width="500">
+      </div>
+      <div class="text">
         <h4 align="rigth">J'aimerais voir des scènes comme...</h4>
-        <rigth><ul>
+        <ul>
             <li>Des montagnes magestueuses comme le Mont Rigi</li>
             <li>Des lacs bleu comme Monte Bré </li>
             <li>Des bâtiments historiques comme la cathédrale de Lauzane</li>
             <li>Et des villes animées comme Zurich</li>
-        </ul></rigth>
-		<br>
+        </ul>
+      </div>
+    </div><br>
+        .container {
+ display: grid;
+ align-items: center; 
+ grid-template-columns: 1fr 1fr 1fr;
+ column-gap: 5px;
+}
+img {
+  max-width: 100%;
+  max-height:100%;
+}
+.text {
+  font-size: 20px;
+}
+		
 		
        <img id="animaux" src="https://www.nationalforests.org/assets/header-images/_1200x630_crop_center-center_82_none/Mountain_Goat_Mount_Massive.JPG?mtime=1428172994" alt="Une chèvre debout sur une roche avec des montagnes en arrière plan" width="500">
          
