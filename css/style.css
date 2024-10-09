@@ -1,6 +1,9 @@
 body{
   font-family: serif ;
   font-size: 18px ;
+  margin: 0px;
+}
+p{
   margin: 10px;
 }
 h1{
@@ -21,7 +24,7 @@ table{
   overflow: hidden;
 }
 .topnav a{
-  float: left;
+  float: center;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
@@ -29,10 +32,10 @@ table{
   font-size: 17px;
 }
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #BCFFFB;
   color: black;
 }
 .topnav a.active {
-  background-color: #04AA6D;
-  color: white;
+  background-color: #71EAFD;
+  color: black;
 }
