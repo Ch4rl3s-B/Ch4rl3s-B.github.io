@@ -1,13 +1,17 @@
 body{
-  font-family: cursive ;
+  font-family: serif ;
   font-size: 12px ;
 }
 h1{
   font-size: 1.5em;
+  font-family: fantasy;
 }
 th, td{
-  padding: 15px;
+  padding: 20px;
+}
+tr{
+  padding: 20px;
 }
 table{
-  border-spacing:5px;
+  border-spacing: 20px;
 }
