@@ -13,6 +13,9 @@ h1{
   font-family: fantasy;
   margin: 8px;
 }
+h2{
+  margin: 8px;
+}
 th, td{
   padding: 10px;
 }
