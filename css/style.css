@@ -26,6 +26,7 @@ table{
   background-color: #333;
   overflow: hidden;
   heigth: 50px;
+  width: 100%;
 }
 .topnav a{
   float: center;
