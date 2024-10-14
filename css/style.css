@@ -24,6 +24,7 @@ tr{
 }
 table{
   border-spacing: 15px;
+  border-right: 2px solid rgb(0,0,0) 
 }
 .topnav {
   background-color: #333;
