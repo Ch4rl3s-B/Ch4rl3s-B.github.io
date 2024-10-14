@@ -29,6 +29,9 @@ table{
 .topnav {
   background-color: #333;
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 .topnav a {
   float: left;
