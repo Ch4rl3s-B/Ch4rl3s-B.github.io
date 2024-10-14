@@ -25,26 +25,24 @@ tr{
 table{
   border-spacing: 15px;
 }
-.topnav{
+/* Add a black background color to the top navigation */
+.topnav {
   background-color: #333;
   overflow: hidden;
-  heigth: 50px;
-  width: 100%;
 }
-.topnav a{
-  float: center;
+.topnav a {
+  float: left;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  left: 30%;
 }
 .topnav a:hover {
-  background-color: #BCFFFB;
+  background-color: #ddd;
   color: black;
 }
 .topnav a.active {
-  background-color: #71EAFD;
-  color: black;
+  background-color: #04AA6D;
+  color: white;
 }
