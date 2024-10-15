@@ -1,0 +1,87 @@
+<html>
+<head>
+  </head>
+  <body>
+   <style>
+     body{
+     	background-img: url('images/EW0ka.jpg');
+     	background-attachment: fixed;
+     	background-size: cover
+     	background-repeat: no-repeat;
+     }
+   .origine{
+     		height: 300px;
+     	background-color: blue;
+     }
+     .passe-temps{
+     	height: 300px;
+     	background-color: red;
+     }
+     #québec{
+     	float: left;
+     	margin-right: 20px;
+     	margin-left: 20px;
+     }
+     #hockey{
+     	float: right;
+     	margin-left: 20px;
+     	margin-right: 20px;
+     }
+	.text1{
+     	margin-left: 20px;
+   		 margin-right: 15px;
+    	font-size: 18px;
+     }
+     .text2{
+     	margin-left: 20px;
+   		 margin-right: 15px;
+    	font-size: 18px;
+     }
+     .emptyspace{
+     		width: 100%;
+     		height: 50px;
+     }
+     .intro{
+     	text-align:center;
+     	height: 100px;
+     	width:100%;
+     }
+    </style>
+
+    <div class="intro">
+      <h1>
+        Biographie
+      </h1>
+    </div>
+    
+   <div class="origine">
+     <div class="emptyspace"></div>
+        	<div id="québec">
+              <img src="https://voyages.destinationcanada.com/_next/image?url=https%3A%2F%2Fadmin.destinationcanada.com%2Fsites%2Fdefault%2Ffiles%2F2023-06%2FQC-Chateau-Frontenac_hero.jpg&w=1920&q=75" height="400px">
+     </div>
+   	 <div class="text1">
+      <h3 style="text-decoration:underline;">
+        Qui suis-je?
+       </h3>
+       <p>
+     		 Bonjour, je m’appelle Charles Bédard et je suis un élève de la 10ème année. Je suis 				né le 9 Août 2009 à Québec. 
+   		 </p>  
+       <div class="emptyspace"></div>
+     </div>
+    </div>
+
+    <div class="passe-temps">
+      <div class="emptyspace"></div>
+      <div id="hockey">
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5ubabIR8qPpcf7ZqGkfGE2Y8SnkWlvbo77kX4opVZYLdpptADts5vNTt9fCtXfpI6diE&usqp=CAU" height="400px">
+      </div>
+   	   <div class="text2">
+      	  <p>
+      		 À l’extérieur de l’école j’ai plusieurs passe-temps qui ne sont pas faire des devoirs.
+  		  </p>
+         <div class="emptyspace"></div>
+      </div>
+    </div>
+      
+  </body>
+</html>
