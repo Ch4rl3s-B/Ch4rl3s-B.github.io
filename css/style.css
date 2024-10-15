@@ -17,6 +17,10 @@ h1{
 h2{
   margin: 8px;
 }
+.emptyspace{
+     		height: 50px;
+		width: 100%;
+    	 }
 
 /*CSS Menu*/
 th, td{
