@@ -1,3 +1,4 @@
+/*CSS général*/
 body{
   font-family: serif ;
   font-size: 18px ;
@@ -10,22 +11,27 @@ p{
 }
 h1{
   font-size: 1.5em;
-  font-family: fantasy;
+  font-family: monospace;
   margin: 8px;
 }
 h2{
   margin: 8px;
 }
+
+/*CSS Menu*/
 th, td{
   padding: 10px;
+}
+td{
+   border-right: 2px solid rgb(0,0,0) 
 }
 tr{
   padding: 10px;
 }
 table{
   border-spacing: 15px;
-  border-right: 2px solid rgb(0,0,0) 
 }
+/*CSS Barre de navigation*/
 .topnav {
   background-color: #333;
   overflow: hidden;
