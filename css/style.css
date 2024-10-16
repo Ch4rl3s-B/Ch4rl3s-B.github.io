@@ -22,21 +22,6 @@ h2{
 		width: 100%;
     	 }
 
-/*CSS Menu*/
-th, td{
-  padding: 10px;
-}
-td{
-   border-right: 2px solid rgb(0,0,0) 
-}
-tr{
-  padding: 10px;
-  
-}
-table{
-  border-spacing: 15px;
-  text-align: center; 
-}
 /*CSS Barre de navigation*/
 .topnav {
   background-color: #333;
