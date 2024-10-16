@@ -43,6 +43,7 @@ table{
   overflow: hidden;
   top: 0;
   width: 100%;
+  font-family: monospace;
 }
 .topnav a {
   float: left;
