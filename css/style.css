@@ -35,6 +35,7 @@ tr{
 }
 table{
   border-spacing: 15px;
+  text-align: center; 
 }
 /*CSS Barre de navigation*/
 .topnav {
