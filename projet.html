@@ -1,74 +1,70 @@
+<!DOCTYPE html>
 <html>
   <head>
-  </head>
-    <body>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
-      <script src="js/script.js"></script>
-      <link rel="stylesheet" href="css/style.css"/>
+    <title>Acceuil</title>
+     <meta charset="utf-8">
+    <link rel="icon" href="images/logo-portefolio.png" type="image/x-icon" />
+     <link rel="stylesheet" href="css/style.css" />
+</head>
+  <body>
+    
+    <script> 
+        function initiales(){ 
+          var prenom = document.getElementById("prénom").value; 
+          var nomMilieu = document.getElementById("nmMilieu").value; 
+          var nomDeFamille = document.getElementById("nmFamille").value; 
+          var initiale = "<br><hr><br>" + prenom[0].toUpperCase() + "." + nomMilieu[0].toUpperCase() + "." + nomDeFamille[0].toUpperCase() + "."; 
+          var affiche = document.getElementById("reponseBox"); affiche.innerHTML = initiale; 
+        } 
+        
+        function nmComplet(){ 
+          var prenom = document.getElementById("prénom").value; 
+          var nomMilieu = document.getElementById("nmMilieu").value; 
+          var nomDeFamille = document.getElementById("nmFamille").value; 
+          var complet = "<br><hr><br>" + prenom + " " + nomMilieu + " " + nomDeFamille + " " 
+            var affiche = document.getElementById("reponseBox"); affiche.innerHTML = complet; 
+        } 
+        function nmDUtilisateur(){ 
+          var prenom = document.getElementById("prénom").value; 
+          var nomMilieu = document.getElementById("nmMilieu").value; 
+          var nomDeFamille = document.getElementById("nmFamille").value; 
+          var utilisateur = "<br><hr><br>" + prenom + nomMilieu[0] + nomDeFamille[0] 
+            var affiche = document.getElementById("reponseBox"); affiche.innerHTML = utilisateur; } 
+        function modulo(){ 
+            var base = document.getElementById("base").value; 
+            var modulo =  document.getElementById("modulo").value; 
+            var reponse = base % modulo 
+            var message = "<br><hr><br>" + reponse; 
+            var affiche = document.getElementById("affiche"); affiche.innerHTML = message; } 
+      </script> 
+    
+    <div class="Noms">
+    
+      <label for="prénom">Prénom: </label> 
+      <input type="text" id="prénom"><br><br> 
+      <label for="nmMilieu">Nom du milieu: </label> 
+      <input type="text" id="nmMilieu"><br><br> 
+      <label for="nmFamille">Nom de famille: </label> 
+      <input type="text" id="nmFamille"><br><br><br> 
       
-      <label for="prénom">Prénom: </label>
-      <input type="text" id="prénom"><br><br>
-      <label for="nmMilieu">Nom du milieu: </label>
-      <input type="text" id="nmMilieu"><br><br>
-      <label for="nmFamille">Nom de famille: </label>
-      <input type="text" id="nmFamille"><br><br><br>
-      <input type="button" id="initiale" value="Initiales" onclick="initiales()">
-      <input type="button" id="complet" value="Nom complet" onclick="nmComplet()">
-      <input type="button" id="nmUtilisateur" value="Nom d'utilisateur" onclick="nmDUtilisateur()">
-      <script>
-          function initiales(){
-                var prenom = document.getElementById("prénom").value;
-                var nomMilieu = document.getElementById("nmMilieu").value;
-                var nomDeFamille = document.getElementById("nmFamille").value;
-                var initiale = "<br><hr><br>" + prenom[0].toUpperCase() + "." + nomMilieu[0].toUpperCase() + "." + nomDeFamille[0].toUpperCase() + ".";
-                var affiche = document.getElementById("reponseBox");
-                affiche.innerHTML = initiale;
-            }
-            
-            function nmComplet(){
-                var prenom = document.getElementById("prénom").value;
-                var nomMilieu = document.getElementById("nmMilieu").value;
-                var nomDeFamille = document.getElementById("nmFamille").value;
-                var complet = "<br><hr><br>" + prenom + " " + nomMilieu + " " + nomDeFamille + " "
-                var affiche = document.getElementById("reponseBox");
-                affiche.innerHTML = complet;
-            }
-            
-            function nmDUtilisateur(){
-                var prenom = document.getElementById("prénom").value;
-                var nomMilieu = document.getElementById("nmMilieu").value;
-                var nomDeFamille = document.getElementById("nmFamille").value;
-                var utilisateur = "<br><hr><br>" + prenom + nomMilieu[0] + nomDeFamille[0]
-                var affiche = document.getElementById("reponseBox");
-                affiche.innerHTML = utilisateur;
-            }
-            
-      </script>
+      <input type="button" id="initiale" value="Initiales" onclick="initiales()"> 
+      <input type="button" id="complet" value="Nom complet" onclick="nmComplet()"> 
+      <input type="button" id="nmUtilisateur" value="Nom d'utilisateur" onclick="nmDUtilisateur()"> 
       
-      <div id="reponseBox">
-          
-      </div>
-
-      <div class="moduloCalculator">
-         <label for="base" >Base:</label>
-          <input type="text" id="base">
-          <label for="modulo" >%</label>
-          <input type="text" id="modulo">
-          <input type="button" id="button" value="Calculer" onclick="modulo()">
-           <div id="affiche">
-              
-          </div>
-          <script>
-         	 function modulo(){
-              var base = document.getElementById("base").value;
-              var modulo =  document.getElementById("modulo").value;
-              var reponse = base % modulo
-              var message = "<br><hr><br>" + reponse;
-              var affiche = document.getElementById("affiche");
-              affiche.innerHTML = message;
-            }
-          </script>  
-      </div>
+      <div id="reponseBox"></div>
       
-    </body>
+    </div>
+    <div class="moduloCalculator"> 
+      
+      <label for="base" >Base:</label> 
+      <input type="text" id="base"> 
+      <label for="modulo" >%</label> 
+      
+      <input type="text" id="modulo"> 
+      <input type="button" id="button" value="Calculer" onclick="modulo()"> 
+      
+      <div id="affiche"> </div> 
+      
+    </div>
+  </body>  
 </html>
