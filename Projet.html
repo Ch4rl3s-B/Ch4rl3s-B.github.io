@@ -48,6 +48,27 @@
       <div id="reponseBox">
           
       </div>
+
+      <div class="moduloCalculator">
+         <label for="base" >Base:</label>
+          <input type="text" id="base">
+          <label for="modulo" >%</label>
+          <input type="text" id="modulo">
+          <input type="button" id="button" value="Calculer" onclick="modulo()">
+           <div id="affiche">
+              
+          </div>
+          <script>
+         	 function modulo(){
+              var base = document.getElementById("base").value;
+              var modulo =  document.getElementById("modulo").value;
+              var reponse = base % modulo
+              var message = "<br><hr><br>" + reponse;
+              var affiche = document.getElementById("affiche");
+              affiche.innerHTML = message;
+            }
+          </script>  
+      </div>
       
     </body>
 </html>
