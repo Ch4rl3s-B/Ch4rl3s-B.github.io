@@ -7,6 +7,21 @@
      <link rel="stylesheet" href="css/style.css" />
 </head>
   <body>
+    <style>
+      body {
+        background-image: url('images/EW0ka.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        text-align:center;
+      }
+
+      .body{
+        background-color: ;
+        text-align:center;
+      }
+      
+    </style>
     
     <script> 
         function initiales(){ 
@@ -37,34 +52,36 @@
             var message = "<br><hr><br>" + reponse; 
             var affiche = document.getElementById("affiche"); affiche.innerHTML = message; } 
       </script> 
-    
-    <div class="Noms">
-    
-      <label for="prénom">Prénom: </label> 
-      <input type="text" id="prénom"><br><br> 
-      <label for="nmMilieu">Nom du milieu: </label> 
-      <input type="text" id="nmMilieu"><br><br> 
-      <label for="nmFamille">Nom de famille: </label> 
-      <input type="text" id="nmFamille"><br><br><br> 
+    <div id="body">  
+      <div class="Noms">
       
-      <input type="button" id="initiale" value="Initiales" onclick="initiales()"> 
-      <input type="button" id="complet" value="Nom complet" onclick="nmComplet()"> 
-      <input type="button" id="nmUtilisateur" value="Nom d'utilisateur" onclick="nmDUtilisateur()"> 
-      
-      <div id="reponseBox"></div>
-      
-    </div>
-    <div class="moduloCalculator"> 
-      
-      <label for="base" >Base:</label> 
-      <input type="text" id="base"> 
-      <label for="modulo" >%</label> 
-      
-      <input type="text" id="modulo"> 
-      <input type="button" id="button" value="Calculer" onclick="modulo()"> 
-      
-      <div id="affiche"> </div> 
-      
+        <label for="prénom">Prénom: </label> 
+        <input type="text" id="prénom"><br><br> 
+        <label for="nmMilieu">Nom du milieu: </label> 
+        <input type="text" id="nmMilieu"><br><br> 
+        <label for="nmFamille">Nom de famille: </label> 
+        <input type="text" id="nmFamille"><br><br><br> 
+        
+        <input type="button" id="initiale" value="Initiales" onclick="initiales()"> 
+        <input type="button" id="complet" value="Nom complet" onclick="nmComplet()"> 
+        <input type="button" id="nmUtilisateur" value="Nom d'utilisateur" onclick="nmDUtilisateur()"> 
+        
+        <div id="reponseBox"></div>
+        
+      </div>
+      <div class="emptyspace"></div>
+      <div class="moduloCalculator"> 
+        
+        <label for="base" >Base:</label> 
+        <input type="text" id="base"> 
+        <label for="modulo" >%</label> 
+        
+        <input type="text" id="modulo"> 
+        <input type="button" id="button" value="Calculer" onclick="modulo()"> 
+        
+        <div id="affiche"> </div> 
+        
+      </div>
     </div>
   </body>  
 </html>
