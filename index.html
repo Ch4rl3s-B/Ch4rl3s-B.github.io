@@ -48,6 +48,21 @@
       <h2>↓Qui suis-je?↓</h2><br>
       <a href="biographie.html"><img src="images/Charles 1.jpg" height="400"></a>
       <div class="emptyspace"></div>
+      <div class="moduloCalculator">
+          <input type="text" id="base">
+            %
+          <input type="text" id="modulo">
+          <input type="button" id="button" value="Calculer" onclick="modulo()">
+      
+          <script>
+           	 function modulo(){
+                var reponse = document.getElementById("base").value % document.getElementById("modulo").value
+              }
+      
+          </script>
+          affiche.innerHTML = reponse;
+      </div>
     </div>
+    
   </body>  
 </html>
