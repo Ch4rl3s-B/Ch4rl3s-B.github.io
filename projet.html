@@ -45,20 +45,68 @@
           var nomMilieu = document.getElementById("nmMilieu").value; 
           var nomDeFamille = document.getElementById("nmFamille").value; 
           var utilisateur = "<br><hr><br>" + prenom + nomMilieu[0] + nomDeFamille[0] 
-            var affiche = document.getElementById("reponseBox"); affiche.innerHTML = utilisateur; } 
+            var affiche = document.getElementById("reponseBox"); affiche.innerHTML = utilisateur; 
+        } 
         function modulo(){ 
             var base = document.getElementById("base").value; 
             var modulo =  document.getElementById("modulo").value; 
             var reponse = base % modulo 
             var message = "<br><hr><br>" + reponse; 
-            var affiche = document.getElementById("affiche"); affiche.innerHTML = message; } 
+            var affiche = document.getElementById("affiche"); affiche.innerHTML = message; 
+        } 
+        function corrige(){
+                var point = 0;
+                var checkVar = document.getElementsByName("variable")
+                for(let i = 0; i < checkVar.length; i++){
+                    if (checkVar[i].checked) {
+                         if(checkVar[i].value == 1){
+                             point += 1
+                         }
+                         
+                        if(checkVar[i].value == 5){
+                             point += 1
+                         }
+                         
+                         if(checkVar[i].value == 6){
+                             point += 1
+                         }
+                         
+                    }
+                }
+                
+                var checkBoucle = document.getElementsByName("boucles")
+                for(let i = 0; i < checkBoucle.length; i++){
+                    if (checkBoucle[i].checked) {
+                         if(checkBoucle[i].value == 3){
+                             point += 1
+                         }
+                         
+                    }
+                }
+                
+                var checkJava = document.getElementsByName("caract")
+                for(let i = 0; i < checkJava.length; i++){
+                    if (checkJava[i].checked) {
+                         if(checkJava[i].value == 3){
+                             point += 1
+                         }
+                         
+                    }
+                }
+                var nom = document.getElementById("nom").value
+                var note = (point*100)/5
+                var message = "<br><hr><br> Merci " + nom + " d'avoir répondue au questionnaire! Ta note est " + note + "%.<br><br>"
+                var affiche = document.getElementById("divaffiche")
+                affiche.innerHTML = message;
+            }
+
       </script> 
 
     <h1 style="text-align:center;">Voici des projets additionnel</h1>
     <div class="emptyspace"></div>
     <div class="emptyspace"></div>
     
-    <div id="body">  
+    <div class="body">  
       <div class="Noms">
       
         <label for="prénom">Prénom: </label> 
@@ -74,7 +122,7 @@
         
         <div id="reponseBox"></div>
         
-      </div>
+      </div>  <!--Fin div nom-->
       <div class="emptyspace"></div>
       <div class="moduloCalculator"> 
         
@@ -87,7 +135,45 @@
         
         <div id="affiche"> </div> 
         
-      </div>
-    </div>
+      </div><!--Fin div calculatrice-->
+      <div class="emptyspace"></div>
+      <div class="questionnaire">
+        <h1>Questionnaire</h1>
+        <p>Remplis le questionnaire et clique corrige pour obtenir ta note.</p>
+            
+        <label for="nom">1. Quel est ton nom? </label>
+        <input type="text" id="nom"><br><br>
+        
+        <label for="languePref">2. Quel est ton langague de code préféré? </label><br>
+        <input type="checkbox" id="languePref" value="html">HTML<br>
+        <input type="checkbox" id="languePref" value="css">CSS<br>
+        <input type="checkbox" id="languePref" value="javascript">JAVASCRIPT<br>
+        <input type="checkbox" id="languePref" value="aucun">J'aime pas coder<br><br>
+        
+        <label for="var">3. Quel variable javascript est mal déclarer? </label><br>
+        <input type="checkbox" id="var" name="variable" value="1">variable achat = fruit; <br>
+        <input type="checkbox" id="var" name="variable" value="2">var num1 = "3"; <br>
+        <input type="checkbox" id="var" name="variable" value="3">var continue = false;<br>
+        <input type="checkbox" id="var" name="variable" value="4">var nom == "Matthieu"<br>
+        <input type="checkbox" id="var" name="variable" value="5">var père = "aucun"<br>
+        <input type="checkbox" id="var" name="variable" value="6">var = oui <br><br>
+        
+        <label for="boucle">4. Quel est une boucle? </label><br>
+        <input type="radio" id="boucle" name="boucles" value="1">if<br>
+        <input type="radio" id="boucle" name="boucles" value="2">function<br>
+        <input type="radio" id="boucle" name="boucles" value="3">for<br>
+        <input type="radio" id="boucle" name="boucles" value="4">switch<br><br>
+
+        <label for="xjava">5. Quel réponse n'est un caractère javascript? </label><br>
+        <input type="radio" id="xjava" name="caract" value="1">\n<br>
+        <input type="radio" id="xjava" name="caract" value="2">\t<br>
+        <input type="radio" id="xjava" name="caract" value="3">\b<br>
+        <input type="radio" id="xjava" name="caract" value="4">\'<br><br>
+        
+        <input type="button" id="go" value="Corriger" onclick="corrige()">
+        
+        <div id="divaffiche"></div>
+      </div><!--Fin div questionnaire-->
+    </div><!--Fin div body-->
   </body>  
 </html>
