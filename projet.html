@@ -128,7 +128,7 @@
                 var nom = document.getElementById("nom").value
                 var note = (point*100)/5
                 var message = "<br><hr><br> Merci " + nom + " d'avoir répondue au questionnaire! Ta note est " + note + "%.<br><br>"
-                var affiche = document.getElementById("divaffiche")
+                var affiche = document.getElementById("divafficheQuest")
                 affiche.innerHTML = message;
             }
             function verifie(){
@@ -187,7 +187,7 @@
                         message = "<br><hr><br>Ne lâcher pas! Vous avez eu " + bonneReponse + " sur 4. Voici les bonnes réponses:<br> - Rosalie: Maîtresse<br> - Paul: Fleuriste<br> - Jean: Boulanger<br> - Marine: Marchand"
                     }
                 
-                var affiche = document.getElementById("divaffiche")
+                var affiche = document.getElementById("divafficheDefi")
                 affiche.innerHTML = message;
             }
             
@@ -279,9 +279,9 @@
         
         <input type="button" id="go" value="Corriger" onclick="corrige()">
         
-        <div id="divaffiche"></div>
+        <div id="divafficheQuest"></div>
       </div><!--Fin div questionnaire-->
-      
+      <div class="emptyspace"></div>
        <div id="defiLogique"><h1>Défi logique</h1><br><br>
         
          <div id="puzzle">
@@ -295,7 +295,7 @@
         
         </div>
         <div class="check"><input type="button" value="Vérifier" onclick="verifie()"></div>
-        <div id="divaffiche"></div>
+        <div id="divafficheDefi"></div>
        </div><!--Fin div défi>
     </div><!--Fin div body-->
   </body>  
