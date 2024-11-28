@@ -20,6 +20,38 @@
         background-color: #FFDD99;
         text-align:center;
       }
+      .nom{
+                float:left;
+                width:70px;
+                text-align:center;
+                height: 100px;
+                line-height:27.5px;
+            }
+            .colone{
+                float:left;
+                width:175px;
+                height:200px;
+                text-align:center;
+                
+            }
+            input[type="checkbox"]{
+                width:25px;
+                height:25px;
+                padding:10px;
+            }
+            .check{
+                width:100%;
+                height:20px;
+                text-align:center;
+            }
+            #puzzle{
+                width:945px;
+                margin-right:auto;
+                margin-left:auto;
+                text-align:center;
+                
+                
+            }
       
     </style>
 
@@ -99,7 +131,66 @@
                 var affiche = document.getElementById("divaffiche")
                 affiche.innerHTML = message;
             }
-
+            function verifie(){
+                
+                var reponseCocher = 0;
+                var bonneReponse = 0;
+                
+                var repRosalie = document.getElementsByName("rosalie")
+                for(let i = 0; i < repRosalie.length; i++){
+                    if (repRosalie[i].checked) {
+                        reponseCocher += 1
+                         if(repRosalie[i].value == 3){
+                             bonneReponse += 1
+                         }
+                         
+                    }
+                }
+                
+                var repPaul = document.getElementsByName("paul")
+                for(let i = 0; i < repPaul.length; i++){
+                    if (repPaul[i].checked) {
+                        reponseCocher += 1
+                         if(repPaul[i].value == 2){
+                             bonneReponse += 1
+                         }
+                         
+                    }
+                }
+                
+                var repJean = document.getElementsByName("jean")
+                for(let i = 0; i < repJean.length; i++){
+                    if (repJean[i].checked) {
+                        reponseCocher += 1
+                         if(repJean[i].value == 1){
+                             bonneReponse += 1
+                         }
+                         
+                    }
+                }
+                
+                var repMarine = document.getElementsByName("marine")
+                for(let i = 0; i < repMarine.length; i++){
+                    if (repMarine[i].checked) {
+                        reponseCocher += 1
+                         if(repMarine[i].value == 4){
+                             bonneReponse += 1
+                         }
+                         
+                    }
+                }
+                
+                var message = "";
+                    if((reponseCocher == 4)&&(bonneReponse == 4)){
+                        message = "<br><hr><br>Bravo! Vous avez eu " + bonneReponse + " sur 4. Voici les bonnes réponses:<br> - Rosalie: Maîtresse<br> - Paul: Fleuriste<br> - Jean: Boulanger<br> - Marine: Marchand"
+                    } else {
+                        message = "<br><hr><br>Ne lâcher pas! Vous avez eu " + bonneReponse + " sur 4. Voici les bonnes réponses:<br> - Rosalie: Maîtresse<br> - Paul: Fleuriste<br> - Jean: Boulanger<br> - Marine: Marchand"
+                    }
+                
+                var affiche = document.getElementById("divaffiche")
+                affiche.innerHTML = message;
+            }
+            
       </script> 
 
      <div class="topnav">
@@ -190,6 +281,22 @@
         
         <div id="divaffiche"></div>
       </div><!--Fin div questionnaire-->
+      
+       <div id="defiLogique"><h1>Défi logique</h1><br><br>
+        
+         <div id="puzzle">
+            <div class="nom"><br>Rosalie<br>Paul<br>Jean<br>Marine</div>
+            <div class="colone">Boulanger<br><input type="checkbox" style="text-align:center;" name="rosalie" id="RO-B" value="1"><br><input type="checkbox" style="text-align:center;" name="paul" id="PA-B" value="1"><br><input type="checkbox" style="text-align:center;" name="jean" id="JE-B" value="1"><br><input type="checkbox" style="text-align:center;" name="marine" id="MA-B" value="1"></div>
+            <div class="colone">Fleuriste<br><input type="checkbox" style="text-align:center;" name="rosalie" id="RO-F" value="2"><br><input type="checkbox" style="text-align:center;" name="paul" id="PA-F" value="2"><br><input type="checkbox" style="text-align:center;" name="jean" id="JE-F" value="2"><br><input type="checkbox" style="text-align:center;" name="marine" id="MA-F" value="2"></div>
+            <div class="colone">Maîtresse<br><input type="checkbox" style="text-align:center;" name="rosalie" id="RO-M" value="3"><br><input type="checkbox" style="text-align:center;" name="paul" id="PA-M" value="3"><br><input type="checkbox" style="text-align:center;" name="jean" id="JE-M" value="3"><br><input type="checkbox" style="text-align:center;" name="marine" id="MA-M" value="3"></div>
+            <div class="colone">Marchand<br><input type="checkbox" style="text-align:center;" name="rosalie" id="RO-MD" value="4"><br><input type="checkbox" style="text-align:center;" name="paul" id="PA-MD"value="4" ><br><input type="checkbox" style="text-align:center;" name="jean" id="JE-MD" value="4"><br><input type="checkbox" style="text-align:center;" name="marine" id="MA-MD" value="4"></div>
+            <div style="width:10px; float:left; text-align:center;" >|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br></div>
+            <div class="indice"><h2>Indice</h2>Rosalie aime bien ses élèves<br><br>Marine vend des légumes<br><br>Jean a horreur des fleurs</div><br><br>
+        
+        </div>
+        <div class="check"><input type="button" value="Vérifier" onclick="verifie()"></div>
+        <div id="divaffiche"></div>
+       </div><!--Fin div défi>
     </div><!--Fin div body-->
   </body>  
 </html>
