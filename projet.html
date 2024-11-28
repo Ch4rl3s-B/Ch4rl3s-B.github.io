@@ -199,9 +199,9 @@
                 
                 var message = "";
                     if((reponseCocher == 4)&&(bonneReponse == 4)){
-                        message = "<br><hr><br>Bravo! Vous avez eu " + bonneReponse + " sur 4. Voici les bonnes réponses:<br> - Rosalie: Maîtresse<br> - Paul: Fleuriste<br> - Jean: Boulanger<br> - Marine: Marchand"
+                        message = "<br><hr><br>Bravo! Vous avez eu " + bonneReponse + " sur 4. Voici les bonnes réponses:<br> - Rosalie: Maîtresse<br> - Paul: Fleuriste<br> - Jean: Boulanger<br> - Marine: Marchand<br><br>"
                     } else {
-                        message = "<br><hr><br>Ne lâcher pas! Vous avez eu " + bonneReponse + " sur 4. Voici les bonnes réponses:<br> - Rosalie: Maîtresse<br> - Paul: Fleuriste<br> - Jean: Boulanger<br> - Marine: Marchand<br>"
+                        message = "<br><hr><br>Ne lâcher pas! Vous avez eu " + bonneReponse + " sur 4. Voici les bonnes réponses:<br> - Rosalie: Maîtresse<br> - Paul: Fleuriste<br> - Jean: Boulanger<br> - Marine: Marchand<br><br>"
                     }
                 
                 var affiche = document.getElementById("divafficheDefi")
@@ -352,7 +352,7 @@
             <div class="colone">Maîtresse<br><input type="checkbox" style="text-align:center;" name="rosalie" id="RO-M" value="3"><br><input type="checkbox" style="text-align:center;" name="paul" id="PA-M" value="3"><br><input type="checkbox" style="text-align:center;" name="jean" id="JE-M" value="3"><br><input type="checkbox" style="text-align:center;" name="marine" id="MA-M" value="3"></div>
             <div class="colone">Marchand<br><input type="checkbox" style="text-align:center;" name="rosalie" id="RO-MD" value="4"><br><input type="checkbox" style="text-align:center;" name="paul" id="PA-MD"value="4" ><br><input type="checkbox" style="text-align:center;" name="jean" id="JE-MD" value="4"><br><input type="checkbox" style="text-align:center;" name="marine" id="MA-MD" value="4"></div>
             <div style="width:10px; float:left; text-align:center;" >|<br>|<br>|<br>|<br>|<br>|<br>|<br>|<br></div>
-            <div class="indice"><h4>Indice</h4>Rosalie aime bien ses élèves<br><br>Marine vend des légumes<br><br>Jean a horreur des fleurs</div><br>
+            <div class="indice"><h4>Indice</h4>Rosalie aime bien ses élèves<br>Marine vend des légumes<br>Jean a horreur des fleurs</div><br>
         
         <div class="check"><input type="button" value="Vérifier" onclick="verifie()"></div>
         <div id="divafficheDefi"></div>
