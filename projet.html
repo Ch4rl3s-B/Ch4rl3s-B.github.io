@@ -86,6 +86,23 @@
             var message = "<br><hr><br>" + reponse; 
             var affiche = document.getElementById("affiche"); affiche.innerHTML = message; 
         } 
+        function genereMadlib(){
+                var case1 = document.getElementById("case1").value.toLowerCase()
+                var case2 = document.getElementById("case2").value.toLowerCase()
+                var case3 = document.getElementById("case3").value.toLowerCase()
+                var case4 = document.getElementById("case4").value
+                var case5 = document.getElementById("case5").value.toLowerCase()
+                var case6 = document.getElementById("case6").value.toLowerCase()
+                var case7 = document.getElementById("case7").value.toLowerCase()
+                var case8 = document.getElementById("case8").value.toLowerCase()
+                var case9 = document.getElementById("case9").value.toLowerCase()
+                var case10 = document.getElementById("case10").value
+                var case11 = document.getElementById("case11").value.toLowerCase()
+                var histoire = "<br><hr><br> <h1>Les plaisir d'été</h1> \n J\'adore l\'été !  Chaque jour, quand je suis en vacances, je me réveille, je mets mes " + case1 + ", je me rend à la cuisine et je mange " + case2 + " pour déjeuner.  Ensuite, mon activité préféré est de " + case3 + " avec mon ami " + case4 + ".  À 14h, je dîne.  Je mange des " + case5 + " " +case6 + ". Durant l\'après-midi, j\'aime me rendre au parc et de " + case7 + " " + case8 +". En soirée, je mange toujours " + case9 + " pour le souper.  Finalement, je me couche et je rêve de " + case10 + ".  Quel été " + case11 + "! <br><br>"
+                var affiche = document.getElementById("madlibsanswer")
+                affiche.innerHTML = histoire;
+            }
+      
         function corrige(){
                 var point = 0;
                 var checkVar = document.getElementsByName("variable")
@@ -243,6 +260,49 @@
         <div id="affiche"> </div> 
         
       </div><!--Fin div calculatrice-->
+      <div class="emptyspace"></div>
+      <div id="madLib">
+        <h1>Mad Libs</h1>
+        <p>Remplis les champs de text avec le mots demander et cliquer sur «Créer le Madlibs» pour voir le résultats.</p>
+        
+        <label for="case1">Vêtements - nom pluriel: </label>
+        <input type="text" id="case1"><br><br>
+        
+        <label for="case2">Nourriture, avec déterminant: </label>
+        <input type="text" id="case2"><br><br>
+        
+        <label for="case3">Action - verbe à l’infinitif: </label>
+        <input type="text" id="case3"><br><br>
+        
+        <label for="case4">Nom d’ami: </label>
+        <input type="text" id="case4"><br><br>
+        
+        <label for="case5">Nourriture - au pluriel: </label>
+        <input type="text6" id="case5"><br><br>
+        
+        <label for="case6">Adjectif: </label>
+        <input type="text" id="case6"><br><br>
+        
+        <label for="case7">Action - verbe à l’infinitif: </label>
+        <input type="text" id="case7"><br><br>
+        
+        <label for="case8">Adverbe qui termine en -ment: </label>
+        <input type="text" id="case8"><br><br>
+        
+        <label for="case9">Nourriture avec déterminant: </label>
+        <input type="text" id="case9"><br><br>
+        
+        <label for="case10">Nom: </label>
+        <input type="text" id="case10"><br><br>
+        
+        <label for="case11">Adjectif: </label>
+        <input type="text" id="case11"><br><br>
+        
+        <input type="button" id="go" value="Créer le Madlibs" onclick="genereMadlib()">
+        
+        <div id="madlibsanswer"></div>
+
+      </div><!--Fin div madLibs-->
       <div class="emptyspace"></div>
       <div class="questionnaire">
         <h1>Questionnaire</h1>
